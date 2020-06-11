@@ -59,6 +59,10 @@ PRODUCT_PACKAGES += \
     libaudioflingerglue \
     miniafservice
 
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/system/etc/init/servicemanager.rc:system/etc/init/servicemanager.rc 
+
 ## Power off charging mode
 PRODUCT_PACKAGES += \
     charger_res_images
@@ -80,6 +84,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
+
 
 # Inherit from msm8996-common
 $(call inherit-product, device/xiaomi/msm8996-common/msm8996.mk)
